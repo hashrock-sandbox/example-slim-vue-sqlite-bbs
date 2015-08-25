@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BBS</title>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css">
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+	<main id="main">
+		<h1>BBS</h1>
+		<textarea v-model="text" class="bbs__textarea"></textarea>
+		<button v-on="click: createPost(text)">投稿</button>	
+		<div class="bbs__item" v-repeat="item: items">
+			<p>
+				{{item.contents}}
+			</p>
+			<p class="bbs__item__id">
+				No: {{item.id}}
+			</p>
+			<small></small>
+		</div>
+
+	</main>
+	<script src="dist/bundle.js"></script>
+</body>
+</html>

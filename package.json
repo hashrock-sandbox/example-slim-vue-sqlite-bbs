@@ -1,0 +1,21 @@
+{
+  "name": "phptw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "browserify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:js": "watchify ${npm_package_config_src_js} -o ${npm_package_config_dist_js} -dv"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "superagent": "^1.3.0",
+    "vue": "^0.12.10"
+  },
+  "config": {
+    "src_js": "src/js/main.js",
+    "dist_js": "dist/bundle.js"
+  }
+}
